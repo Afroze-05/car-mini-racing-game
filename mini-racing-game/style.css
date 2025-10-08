@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background: #2c3e50;
+  color: white;
+  overflow: hidden;
+}
+
+.title {
+  margin-top: 20px;
+  font-size: 2rem;
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.road {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  background: repeating-linear-gradient(
+    #7f8c8d,
+    #7f8c8d 40px,
+    #95a5a6 40px,
+    #95a5a6 80px
+  );
+  overflow: hidden;
+  border: 5px solid #ecf0f1;
+  border-radius: 10px;
+  animation: moveRoad 1s linear infinite;
+}
+
+@keyframes moveRoad {
+  from { background-position-y: 0; }
+  to { background-position-y: 80px; }
+}
+
+.car {
+  position: absolute;
+  bottom: 20px;
+  left: 125px;
+  width: 50px;
+  height: 100px;
+  background: red;
+  border-radius: 5px;
+}
+
+.obstacle {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  background: yellow;
+  top: -100px;
+  border-radius: 5px;
+}
+
+.score {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.instructions {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.gameOver {
+  font-size: 2rem;
+  color: #e74c3c;
+  display: none;
+  margin-top: 15px;
+}
